@@ -16,5 +16,7 @@ django-environ = "~=0.4.5"
 python_version = "3.8"
 
 [scripts]
+start = "python manage.py runserver"
+manage = "python manage.py"
 lint = "python -m flake8"
 precommit = "python -m pre-commit install"

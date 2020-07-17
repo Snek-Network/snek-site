@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="og:title" content='Snek Network'>
+    <meta name="og:description" content="The ultimate Discord bot, controllable with our dashboard.">
+    <meta name="og:url" content="{{ request.path }}">
+
+    <title>Snek Network {% block title %}{% endblock %}</title>
+
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <div>
+        {% block body %}{% endblock %}
+    </div>
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>
