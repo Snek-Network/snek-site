@@ -10,7 +10,7 @@ pre-commit = "~=2.6.0"
 [packages]
 django = "~=3.0.8"
 djangorestframework = "~=3.11.0"
-django-environ = "*"
+django-environ = "~=0.4.5"
 
 [requires]
 python_version = "3.8"
