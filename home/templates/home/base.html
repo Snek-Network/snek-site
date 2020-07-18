@@ -1,14 +1,18 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="og:image" content="{% static 'home/img/logo.png' %}">
     <meta name="og:title" content='Snek Network'>
     <meta name="og:description" content="The ultimate Discord bot, controllable with our online dashboard.">
     <meta name="og:url" content="{{ request.path }}">
 
     <title>Snek Network {% block title %}{% endblock %}</title>
+    <link rel="shortcut icon" href="{% static 'home/favicon.ico' %}" type="image/png">
 
     {% block head %}{% endblock %}
 </head>
