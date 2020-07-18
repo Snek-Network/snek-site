@@ -1,0 +1,17 @@
+# https://aka.ms/yaml
+
+jobs:
+  - job: build
+    displayName: 'Build & Push Container'
+    condition: and(ne(variables['Build.Reason'], 'PullRequest'), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+
+    steps:
+      - task: Docker@2
+        displayName: 'Build & Push Container'
+        inputs:
+          containerRegistry: 'DockerHub'
+          repository: 'sneknetwork/snek-site'
+          command: 'buildAndPush'
+          Dockerfile: 'Dockerfile'
+          buildContext: '.'
+          tags: 'latest'
