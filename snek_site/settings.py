@@ -31,20 +31,25 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
     'sneknetwork.com',
-    'www.sneknetwork.com'
+    'www.sneknetwork.com',
+    'api.sneknetwork.com',
 ]
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'home',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'rest_framework',
+
+    'home',
+    'api',
 ]
 
 MIDDLEWARE = [
