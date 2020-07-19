@@ -9,9 +9,10 @@ from api.models.utils import ModelReprMixin
 class User(ModelReprMixin, models.Model):
     """A Discord user."""
     id = models.BigIntegerField(
+        primary_key=True,
         validators=(
             MinValueValidator(
-                limit=0,
+                limit_value=0,
                 message='User IDs cannot be negative.'
             ),
         ),
@@ -31,7 +32,7 @@ class User(ModelReprMixin, models.Model):
     discriminator = models.PositiveSmallIntegerField(
         validators=(
             MaxValueValidator(
-                limit=9999,
+                limit_value=9999,
                 message='Discriminators may not exceed 9999.'
             ),
         ),
