@@ -49,11 +49,11 @@ class User(ModelReprMixin, models.Model):
     def __str__(self):
         return f"{self.name}#{self.discriminator}"
 
-    def top_role(self, guild_id) -> Role:
+    def top_role(self, guild) -> Role:
         """Returns the ID of a user's top role."""
-        roles = self.roles.filter(guild__id=guild_id)
+        roles = self.roles.filter(guild__id=guild.id)
 
         if not roles:
-            return guild_id
+            return Roles.objects.get(id=guild.id)
 
-        return max(roles).id
+        return max(roles)
