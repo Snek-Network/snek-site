@@ -21,3 +21,7 @@ class Guild(ModelReprMixin, models.Model):
         max_length=100,
         help_text='The name of a Discord guild.'
     )
+
+    icon_url = models.URLField(
+        help_text="The URL of a guild's icon."
+    )
