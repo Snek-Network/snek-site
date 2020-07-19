@@ -3,7 +3,6 @@ from rest_framework import serializers
 from api.models import Guild, GuildConfig, Role, User
 
 
-
 class GuildSerializer(serializers.ModelSerializer):
     """(De-)Serialization of `Guild` instances."""
 

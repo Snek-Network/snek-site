@@ -57,6 +57,6 @@ class Role(ModelReprMixin, models.Model):
 
     def __lt__(self, other):
         return self.position < other.position
-    
+
     def __le__(self, other):
         return self.position <= other.position
