@@ -45,7 +45,6 @@ class User(ModelReprMixin, models.Model):
     roles = models.ManyToManyField(Role)
     guilds = models.ManyToManyField(Guild)
 
-
     def __str__(self):
         return f"{self.name}#{self.discriminator}"
 
