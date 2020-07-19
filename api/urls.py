@@ -11,8 +11,8 @@ from api.viewsets import (
 
 router = DefaultRouter()
 
-router.register('guilds/', GuildViewSet)
-router.register('guild_configs/', GuildConfigViewSet)
+router.register('guilds', GuildViewSet)
+router.register('guild_configs', GuildConfigViewSet)
 router.register('roles', RoleViewSet)
 router.register('users', UserViewSet)
 
