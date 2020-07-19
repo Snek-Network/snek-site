@@ -1,6 +1,3 @@
-from api.models.role import Role
-
-
 class ModelReprMixin:
     """Mixin providing a `__repr__` method."""
 
