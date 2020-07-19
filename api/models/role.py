@@ -1,6 +1,7 @@
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 
+from api.models.guild import Guild
 from api.models.utils import ModelReprMixin
 
 
@@ -48,6 +49,8 @@ class Role(ModelReprMixin, models.Model):
     position = models.IntegerField(
         help_text="The position of a role in the role hierarchy of a guild."
     )
+
+    guild = models.ForeignKey(Guild, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
