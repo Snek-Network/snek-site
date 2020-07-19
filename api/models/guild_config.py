@@ -13,16 +13,18 @@ class GuildConfig(ModelReprMixin, models.Model):
         primary_key=True
     )
 
-    mod_role = models.ForeignKey(
+    mod_role = models.OneToOneField(
         Role,
         on_delete=models.SET_NULL,
         null=True,
+        related_name='mod_in_guild_config',
         help_text='The moderator role of a guild.'
     )
 
-    admin_role = models.ForeignKey(
+    admin_role = models.OneToOneField(
         Role,
         on_delete=models.SET_NULL,
         null=True,
+        related_name='admin_in_guild_config',
         help_text='The administrator role of a guild.'
     )
