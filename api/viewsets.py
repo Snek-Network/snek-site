@@ -1,7 +1,12 @@
 from rest_framework.viewsets import ModelViewSet
 
 from api.models import Guild, GuildConfig, Role, User
-from api.serializers import GuildSerializer, GuildConfigSerializer, RoleSerializer, UserSerializer
+from api.serializers import (
+    GuildSerializer,
+    GuildConfigSerializer,
+    RoleSerializer,
+    UserSerializer
+)
 
 
 class GuildViewSet(ModelViewSet):
