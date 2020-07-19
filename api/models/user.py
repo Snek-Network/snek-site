@@ -54,6 +54,7 @@ class User(ModelReprMixin, models.Model):
         roles = self.roles.filter(guild__id=guild.id)
 
         if not roles:
+            # The ID of @everyone is the guild's ID
             return Roles.objects.get(id=guild.id)
 
         return max(roles)
