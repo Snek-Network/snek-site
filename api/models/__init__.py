@@ -1,4 +1,5 @@
-from api.models.guild import Guild, GuildConfig
+from api.models.guild import Guild
+from api.models.guild_config import GuildConfig
 from api.models.role import Role
 from api.models.user import User
 

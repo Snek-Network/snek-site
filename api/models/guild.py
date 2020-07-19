@@ -1,7 +1,6 @@
 from django.core.validators import MinValueValidator
 from django.db import models
 
-from api.models.role import Role
 from api.models.utils import ModelReprMixin
 
 
@@ -25,28 +24,4 @@ class Guild(ModelReprMixin, models.Model):
 
     icon_url = models.URLField(
         help_text="The URL of a guild's icon."
-    )
-
-    config = models.OneToOneField(
-        GuildConfig,
-        on_delete=models.SET_DEFAULT,
-        default=GuildConfig,
-        help_text='The config for a guild.'
-    )
-
-
-class GuildConfig(ModelReprMixin, models.Model):
-    """A config for a Discord guild."""
-    mod_role = models.ForeignKey(
-        Role,
-        on_delete=models.SET_NULL,
-        null=True,
-        help_text='The moderator role of a guild.'
-    )
-
-    admin_role = models.ForeignKey(
-        Role,
-        on_delete=models.SET_NULL,
-        null=True,
-        help_text='The administrator role of a guild.'
     )
