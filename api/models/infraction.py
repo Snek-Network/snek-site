@@ -55,6 +55,7 @@ class Infraction(ModelReprMixin, models.Model):
     )
 
     type = models.CharField(
+        max_length=10,
         choices=INFRACTION_TYPES,
         help_text='The type of infraction.'
     )
@@ -70,7 +71,7 @@ class Infraction(ModelReprMixin, models.Model):
     )
 
     class Meta:
-        ordering = ['-inserted_at']
+        ordering = ['-created_at']
         constraints = (
             models.UniqueConstraint(
                 fields=['guild', 'user', 'type'],
