@@ -49,6 +49,7 @@ class Infraction(ModelReprMixin, models.Model):
 
     actor = models.ForeignKey(
         User,
+        on_delete=models.CASCADE,
         related_name='infractions_given',
         help_text='The user who gave an infraction.'
     )
