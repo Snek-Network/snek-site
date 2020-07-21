@@ -6,7 +6,7 @@ from api.models.utils import ModelReprMixin
 
 class Guild(ModelReprMixin, models.Model):
     """A Discord guild."""
-    id = models.PositiveIntegerField(
+    id = models.BigIntegerField(
         primary_key=True,
         validators=(
             MinValueValidator(

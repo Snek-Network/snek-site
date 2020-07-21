@@ -7,7 +7,7 @@ from api.models.utils import ModelReprMixin
 
 class Role(ModelReprMixin, models.Model):
     """A Discord role."""
-    id = models.PositiveIntegerField(
+    id = models.BigIntegerField(
         primary_key=True,
         validators=(
             MinValueValidator(
