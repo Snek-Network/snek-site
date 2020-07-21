@@ -50,10 +50,10 @@ class InfractionSerializer(ModelSerializer):
             raise ValidationError({'expires_at': [f'{infr_type} infractions cannot expire.']})
 
         hidden = attrs.get('hidden')
-        if hidden and infr_type in ('superstar', 'warning'):
+        if hidden and infr_type in ('force_nick', 'warning'):
             raise ValidationError({'hidden': [f'{infr_type} infractions cannot be hidden.']})
 
-        if not hidden and infr_type in ('note', ):
+        if not hidden and infr_type in ('note',):
             raise ValidationError({'hidden': [f'{infr_type} infractions must be hidden.']})
 
         return attrs
