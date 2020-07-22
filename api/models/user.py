@@ -43,8 +43,8 @@ class User(ModelReprMixin, models.Model):
         help_text="The URL of a user's avatar."
     )
 
-    roles = models.ManyToManyField(Role)
-    guilds = models.ManyToManyField(Guild)
+    roles = models.ManyToManyField(Role, blank=True)
+    guilds = models.ManyToManyField(Guild, blank=True)
 
     def __str__(self):
         return f"{self.name}#{self.discriminator}"
