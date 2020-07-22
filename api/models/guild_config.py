@@ -10,7 +10,8 @@ class GuildConfig(ModelReprMixin, models.Model):
     guild = models.OneToOneField(
         Guild,
         on_delete=models.CASCADE,
-        primary_key=True
+        primary_key=True,
+        related_name='config'
     )
 
     mod_role = models.OneToOneField(
