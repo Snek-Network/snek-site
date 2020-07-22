@@ -24,11 +24,6 @@ class User(ModelReprMixin, models.Model):
         help_text='The username of a user.'
     )
 
-    display_name = models.CharField(
-        max_length=32,
-        help_text='The display name of a user.'
-    )
-
     discriminator = models.PositiveSmallIntegerField(
         validators=(
             MaxValueValidator(

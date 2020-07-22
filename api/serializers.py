@@ -72,4 +72,4 @@ class UserSerializer(ModelSerializer):
 
     class Meta:
         model = User
-        fields = ('id', 'name', 'display_name', 'discriminator', 'avatar_url', 'roles', 'guilds')
+        fields = ('id', 'name', 'discriminator', 'avatar_url', 'roles', 'guilds')
