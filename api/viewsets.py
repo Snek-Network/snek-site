@@ -60,3 +60,7 @@ class UserViewSet(ModelViewSet):
     """View providing CRUD access to the users stored."""
     queryset = User.objects.all()
     serializer_class = UserSerializer
+
+    filter_backends = (DjangoFilterBackend,)
+
+    filter_fields = ('name', 'discriminator')
