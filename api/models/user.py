@@ -34,6 +34,10 @@ class User(ModelReprMixin, models.Model):
         help_text='The discriminator of a user.'
     )
 
+    created_at = models.DateTimeField(
+        help_text='The datetime when a user was created.'
+    )
+
     avatar_url = models.URLField(
         help_text="The URL of a user's avatar."
     )

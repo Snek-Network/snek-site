@@ -9,7 +9,7 @@ class GuildSerializer(ModelSerializer):
 
     class Meta:
         model = Guild
-        fields = ('id', 'name', 'icon_url')
+        fields = ('id', 'name', 'created_at', 'icon_url')
 
 
 class GuildConfigSerializer(ModelSerializer):
@@ -64,7 +64,7 @@ class RoleSerializer(ModelSerializer):
 
     class Meta:
         model = Role
-        fields = ('id', 'name', 'color', 'permissions', 'position', 'guild')
+        fields = ('id', 'name', 'created_at', 'color', 'permissions', 'position', 'guild')
 
 
 class UserSerializer(ModelSerializer):
@@ -72,4 +72,4 @@ class UserSerializer(ModelSerializer):
 
     class Meta:
         model = User
-        fields = ('id', 'name', 'discriminator', 'avatar_url', 'roles', 'guilds')
+        fields = ('id', 'name', 'discriminator', 'created_at', 'avatar_url', 'roles', 'guilds')

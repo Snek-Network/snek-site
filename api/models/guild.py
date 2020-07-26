@@ -22,6 +22,10 @@ class Guild(ModelReprMixin, models.Model):
         help_text='The name of a Discord guild.'
     )
 
+    created_at = models.DateTimeField(
+        help_text='The datetime when a guild was created.'
+    )
+
     icon_url = models.URLField(
         help_text="The URL of a guild's icon."
     )

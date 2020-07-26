@@ -33,6 +33,10 @@ class Role(ModelReprMixin, models.Model):
         help_text='The integer value of the color of a role.'
     )
 
+    created_at = models.DateTimeField(
+        help_text='The datetime when a role was created.'
+    )
+
     permissions = models.IntegerField(
         validators=(
             MinValueValidator(
