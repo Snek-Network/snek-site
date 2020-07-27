@@ -11,7 +11,7 @@ from django.core.management import call_command, execute_from_command_line
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'snek_site.settings')
 os.environ.setdefault('SUPERUSER_USERNAME', 'admin')
 os.environ.setdefault('SUPERUSER_PASSWORD', 'password')
-os.environ.setdefault('DEFAULT_SNEK_API_TOKEN', '704Z1PjVo0SbjDCbtkL5J4GYQMqiUm9vJrjCXY8OB18')
+os.environ.setdefault('DEFAULT_SNEK_API_TOKEN', '704Z1PjVo0SbjDCbtkL5J4GYQMqiUm9vJrjCXY8O')
 
 
 class SiteManager:
