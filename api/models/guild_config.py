@@ -29,3 +29,9 @@ class GuildConfig(ModelReprMixin, models.Model):
         related_name='admin_in_guild_config',
         help_text='The administrator role of a guild.'
     )
+
+    command_prefix = models.CharField(
+        default='!',
+        max_length=3,
+        help_text='The prefix for commands in a guild.'
+    )
