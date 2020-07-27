@@ -13,8 +13,7 @@ ENV PIP_NO_CACHE_DIR=false \
 WORKDIR /app
 COPY . .
 
-RUN pip install -U uwsgi
 RUN pip install -U 'pipenv==2018.11.26' && pipenv install --system --deploy
 
-ENTRYPOINT ["uwsgi"]
-CMD ["--ini", "uwsgi.ini"]
+ENTRYPOINT ["python", "manage.py"]
+CMD ["run"]
