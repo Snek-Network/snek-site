@@ -10,7 +10,7 @@ from api.viewsets import (
 )
 
 
-router = DefaultRouter()
+router = DefaultRouter(trailing_slash=False)
 
 router.register('guilds', GuildViewSet)
 router.register('guild_configs', GuildConfigViewSet)
