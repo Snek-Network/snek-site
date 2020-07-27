@@ -129,3 +129,6 @@ dmypy.json
 
 # PostgreSQL Database
 postgres_data/
+
+# Static Files
+static/
