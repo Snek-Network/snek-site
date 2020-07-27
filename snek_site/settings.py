@@ -27,16 +27,12 @@ SECRET_KEY = env('SECRET_KEY')
 
 DEBUG = env('DEBUG')
 
-ALLOWED_HOSTS = [
-    'sneknetwork.com',
-    'www.sneknetwork.com'
-]
-
 if DEBUG:
-    ALLOWED_HOSTS += [
-        '127.0.0.1',
-        'localhost',
-        'snek_site'
+    ALLOWED_HOSTS = ['*']
+else:
+    ALLOWED_HOSTS = [
+        'sneknetwork.com',
+        'www.sneknetwork.com'
     ]
 
 
