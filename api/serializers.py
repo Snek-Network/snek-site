@@ -17,7 +17,7 @@ class GuildConfigSerializer(ModelSerializer):
 
     class Meta:
         model = GuildConfig
-        fields = ('guild', 'mod_role', 'admin_role')
+        fields = ('guild', 'mod_role', 'admin_role', 'command_prefix')
 
 
 class InfractionSerializer(ModelSerializer):
