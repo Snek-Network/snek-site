@@ -39,9 +39,9 @@ class InfractionSerializer(ModelSerializer):
 
     def validate(self, attrs):
         """Validate data constraints for the given data."""
-        infr_type = attrs['type']
+        infr_type = attrs.get('type')
 
-        active = attrs['active']
+        active = attrs.get('active')
         if active and infr_type in ('note', 'warning', 'kick'):
             raise ValidationError({'active': [f'{infr_type} infractions cannot be active.']})
 
